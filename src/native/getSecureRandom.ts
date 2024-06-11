@@ -5,11 +5,10 @@
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  */
-
-const getRandomBytes = require('react-native-randombytes').randomBytes;
+const { randomBytes } = require("react-native-quick-crypto");
 
 export function getSecureRandomBytes(size: number): Buffer {
-    return Buffer.from(getRandomBytes(size));
+    return Buffer.from(randomBytes(size));
 }
 
 export function getSecureRandomWords(size: number): Uint16Array {
